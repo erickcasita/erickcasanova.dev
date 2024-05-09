@@ -1,8 +1,5 @@
 # Portfolio
 
-![image](https://github.com/DavidCast27/portfolio/assets/17658533/27f48604-8abe-4ff5-9d5d-4c32f2686098)
-
-
 ## 🚀 Project Structure
 ```text
 /
