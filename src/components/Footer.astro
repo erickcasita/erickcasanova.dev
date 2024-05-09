@@ -1,0 +1,27 @@
+---
+import { HEADER_ITEMS } from "../constants/nav.constants";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<footer class="m-4 w-full sm:w-[600px] lg:w-[740px] mx-auto mb-8">
+  <div class="flex items-center md:gap-2 flex-col md:flex-row justify-between">
+    <span class="text-sm lg:text-base"> {i18n.copyright}</span>
+    <nav
+      class="flex flex-row gap-2 lg:gap-8 justify-center items-center mx-auto"
+    >
+      {
+        HEADER_ITEMS.map(({ label, href }) => (
+          <a
+            class="text-xs md:text-sm lg:text-base hover:bg-gray-300 dark:hover:bg-gray-800 rounded px-1 py-2 md:px-4 transition hover:scale-110 "
+            href={href}
+          >
+            {i18n.menu[label]}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</footer>

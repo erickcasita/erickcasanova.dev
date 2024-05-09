@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "title": "Erick Casanova  - Software developer",
+    "description": "Erick Casanova - Software developer - Python, C#, JavaScript"
+  },
+  "menu": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "copyright": "©️ no copyright",
+  "home": {
+    "name": "Erick Ramirez Casanova",
+    "role": "Software developer",
+    "status": {
+      "available": "Available"
+    },
+    "years_of_experience": "+3 years of experience",
+    "main_paragraph": "Softwre developer  using <span class='text-yellow-800/90 dark:text-yellow-100/90'>C# .NET, Python, JavaScript.</span>Specialized in automating work processes in leading companies in the sector.",
+    "second_paragraph": "Additionally +1 years of experience in <span class='text-green-700/90 dark:text-green-100/90'>NodeJS/span>",
+    "social": {
+      "github": "Github",
+      "linkedin": "LinkedIn",
+      "mail": "casa.erickmr@gmail.com",
+      "download_cv": "Download CV"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "status": {
+      "current": "Present"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "links": {
+      "code": "Code",
+      "web": "Webside"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "first_paragraph": "I am passionate about programming and constantly learning about new technologies. I firmly believe that knowledge is for everyone, and I enjoy collaborative learning and applying what I've learned in the workplace through teaching.",
+    "second_paragraph": "I am someone who enjoys working in a team, loves challenges, and is known for remaining calm when making decisions to help find solutions to problems in a work environment.",
+    "third_paragraph": "Committed to using my experience and knowledge in software quality to improve applications and generate more value for customers."
+  }
+}

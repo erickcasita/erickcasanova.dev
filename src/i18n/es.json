@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "title": "Erick Casanova - Desarrollador de Software",
+    "description": "Porfolio de Erick Casanova - Desarrollador de Software - Python, C#, JavaScript"
+  },
+  "menu": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí"
+  },
+  "copyright": "©️ Aca no reservamos nada",
+  "home": {
+    "name": "Erick Ramirez Casanova",
+    "role": "Desarrollador de Software",
+    "status": {
+      "available": "Disponible"
+    },
+    "years_of_experience": "+3 años de experiencia",
+    "main_paragraph": "Desarrollador de Software usando <span class='text-yellow-800/90 dark:text-yellow-100/90'>C# .NET, Python, JavaScript,</span> Especializado en automatizar los procesos de trabajo en empresas lideres del sector.",
+    "second_paragraph": "Adicionalmente +1 año de experiencia en <span class='text-green-700/90 dark:text-green-100/90'>NodeJS</span>",
+    "social": {
+      "github": "Github",
+      "linkedin": "LinkedIn",
+      "mail": "casa.erickmr@gmail.com",
+      "download_cv": "Descargar CV"
+    }
+  },
+  "experience": {
+    "title": "Experiencia laboral",
+    "status": {
+      "current": "Actualmente"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "links": {
+      "code": "Codigo",
+      "web": "Sitio web"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "first_paragraph": "Me apasiona la programación y aprender constantemente sobre nuevas tecnologías. Creo firmemente en que el conocimiento es de todos y para todos, por lo cual disfruto del aprendizaje colaborativo y de aplicar lo aprendido en el ámbito laboral a través de la enseñanza.",
+    "second_paragraph": "Soy una persona que disfruta de trabajar en equipo, que le encantan los retos y se caracteriza por estar calmado al momento de tomar decisiones en aras de ayudar a buscar soluciones a los problemas que se presenten en un entorno laboral.",
+    "third_paragraph": "Comprometido en utilizar mi experiencia y conocimiento en la calidad del software para mejorar las aplicaciones, y así generar más valor a los clientes."
+  }
+}

@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Experience from "../../components/experiencies/Experience.astro";
+import Projects from "../../components/projects/Projects.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import LaptopIcon from "../../components/icons/LaptopIcon.astro";
+import CodeIcon from "../../components/icons/CodeIcon.astro";
+import Home from "../../components/home/Home.astro";
+import AboutMe from "../../components/about/AboutMe.astro";
+import UserSquareRoundedIcon from "../../components/icons/UserSquareRoundedIcon.astro";
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<Layout title={i18n.seo.title} description={i18n.seo.description}>
+  <main class="px-8">
+    <SectionContainer id="home" class="py-28 pb-8 md:py-40 md:pb-10 lg:pb-14">
+      <Home />
+    </SectionContainer>
+    <SectionContainer
+      id="experience"
+      title={i18n.experience.title}
+      class="pt-20 pb-4 md:pb-5 lg:pb-7"
+    >
+      <LaptopIcon class="size-8" slot="icon" />
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer
+      id="projects"
+      title={i18n.projects.title}
+      class="pt-20 pb-4 md:pb-5 lg:pb-7"
+    >
+      <CodeIcon class="size-8" slot="icon" />
+      <Projects />
+    </SectionContainer>
+    <SectionContainer
+      id="about-me"
+      title={i18n.about.title}
+      class="pt-20 pb-4 md:pb-5 lg:pb-7"
+    >
+      <UserSquareRoundedIcon class="size-8" slot="icon" />
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

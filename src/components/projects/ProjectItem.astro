@@ -1,0 +1,70 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+import TagPill from "../ui/TagPill.astro";
+import SocialPill from "../ui/SocialPill.astro";
+import BoxSeamIcon from "../icons/BoxSeamIcon.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import Paragraph from "../ui/Paragraph.astro";
+import { getI18N } from "../../i18n";
+
+interface Props {
+  title: string;
+  description: string;
+  tags: Array<{ name: string; className: string; Icon: JSX.Element }>;
+  image: string;
+  codeURL: string;
+  webSiteURL?: string;
+}
+const { title, description, tags, image, codeURL, webSiteURL } = Astro.props;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<article class="mb-6 md:mb-12">
+  <header
+    class="flex flex-col gap-2 items-start sm:flex-row sm:items-center sm:gap-4 mb-6"
+  >
+    <h4
+      class="text-lg md:text-xl font-semibold text-green-800/80 dark:text-green-100/80"
+    >
+      {title}
+    </h4>
+    <div class="flex gap-2 md:gap-4">
+      <SocialPill href={codeURL} title="code">
+        <CodeIcon class="size-4" />
+        <span class="hidden md:inline text-xs">
+          {i18n.projects.links.code}
+        </span>
+      </SocialPill>
+      {
+        webSiteURL && (
+          <SocialPill href={webSiteURL} title="web">
+            <BoxSeamIcon class="size-4" />
+            <span class="hidden md:inline text-xs">
+              {i18n.projects.links.web}
+            </span>
+          </SocialPill>
+        )
+      }
+    </div>
+  </header>
+  <Paragraph>{description}</Paragraph>
+  <ul
+    class="flex gap-2 md:gap-4 flex-row my-4 md:my-8 flex-wrap justify-center lg:justify-start"
+  >
+    {
+      tags.map(({ name, Icon, className }) => (
+        <TagPill className={className}>
+          <Icon class="size-5" />
+          <span class="hidden md:inline text-xs">{name}</span>
+        </TagPill>
+      ))
+    }
+  </ul>
+  <img
+    class="rounded shadow-2xl shadow-black/20 dark:shadow-white/15 w-full"
+    src={image}
+    alt={`imagen de ${title} `}
+  />
+</article>

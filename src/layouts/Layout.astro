@@ -1,0 +1,92 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "@fontsource/onest";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { description, title } = Astro.props;
+const { currentLocale } = Astro;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://castri.dev/en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/documents/2df9b46a-b1e0-4306-b331-f47ba2c2a293.png?token=w7X2obgizZ57k5Q4xm3Xg1CtsdCp4xZJqTziNOra7wU&height=496&width=771&expires=33241264526"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="castri.dev" />
+    <meta property="twitter:url" content="https://castri.dev/en" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/documents/2df9b46a-b1e0-4306-b331-f47ba2c2a293.png?token=w7X2obgizZ57k5Q4xm3Xg1CtsdCp4xZJqTziNOra7wU&height=496&width=771&expires=33241264526"
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-gray-200 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+    <Header />
+    <slot />
+    <Footer />
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+      html {
+        font-family: "Onest", sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+      }
+    </style>
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
+  </body>
+</html>
