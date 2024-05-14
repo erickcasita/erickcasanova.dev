@@ -23,7 +23,10 @@
       "github": "Github",
       "linkedin": "LinkedIn",
       "mail": "casa.erickmr@gmail.com",
-      "download_cv": "Descargar CV"
+      "download_cv":{
+          "title": "Descargar CV",
+          "url": "/CV-ES-Erick.pdf"
+      } 
     }
   },
   "experience": {
